@@ -84,9 +84,10 @@ void CompteCarac(void)
 list nb_Occurrences()
 {
 
-    int i;
+    int i,j,nb_carac_total = 0,compteur=0;
     int tab[128] = {0};
     int carac;
+    list minimum =malloc(sizeof(node));
     list stock_occ=malloc(sizeof(node));
 
     FILE * fic;
@@ -104,18 +105,47 @@ list nb_Occurrences()
         tab[carac]++;
     }
 
-    for(i=0;i<=127;i++)
+    for(i=0;i<128;i++)
     {
-        if (tab[i]!=0)
-        {
-            stock_occ->lettre=i;
-            stock_occ->nb_occ=tab[i];
-            printf("Lettre = '%c', Occurences = %d\n",i,tab[i]);
-            stock_occ->succ=malloc(sizeof(node));
-            stock_occ= stock_occ->succ;
-        }
+        if(tab[i]!= 0)
+            nb_carac_total +=1;
+    }
 
-      }
+    do{
+         for(i=0;i<128;i++)
+         {
+             if(tab[i] !=0)
+             {
+                 minimum->lettre =i;
+                 minimum->nb_occ =tab[i];
+             }
+
+             for(j=0;j<128;j++)
+             {
+                 if(tab[j]!=0)
+                 {
+                     if(tab[j]<minimum->nb_occ)
+                     {
+                         minimum->lettre = j;
+                         minimum->nb_occ = tab[j];
+                     }
+                 }
+             }
+         }
+
+        stock_occ->lettre = minimum->lettre;
+        stock_occ->nb_occ = minimum->nb_occ;
+        printf("Lettre='%c',Occurences=%d\n",stock_occ->lettre,stock_occ->nb_occ);
+        stock_occ->succ=malloc(sizeof(node));
+        stock_occ=stock_occ->succ;
+
+        tab[minimum->lettre] =0;
+
+        compteur +=1;
+    }while(compteur !=nb_carac_total);
+
+
 
     return stock_occ;
 }
+

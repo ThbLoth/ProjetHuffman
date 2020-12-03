@@ -12,5 +12,4 @@ typedef node * list;
 void Conversion(FILE*);
 void CompteCarac(void);
 list nb_Occurrences(void);
-
 #endif // HUFFMAN_H_INCLUDED

@@ -7,12 +7,13 @@ int main()
 {
     FILE * fic;
 
+    list liste_occurence,liste_occurence_triee;
+
     fic = fopen("Alice.txt","r");
 
     Conversion(fic);
     CompteCarac();
-    nb_Occurrences();
-
+    liste_occurence=nb_Occurrences();
 
     return 0;
 }
