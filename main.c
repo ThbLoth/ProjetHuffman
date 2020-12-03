@@ -1,16 +1,18 @@
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "HUFFMAN.h"
-#include "HUFFMAN.c"
+#include "huffman.c"
 
-int main(void)
+int main()
 {
-    FILE* fic = NULL;
+    FILE * fic;
 
-    fic = fopen("Alice.txt",r);
+    fic = fopen("Alice.txt","r");
 
-    //Insérer les fonctions ci-dessous
+    Conversion(fic);
+    CompteCarac();
+    nb_Occurrences();
+
 
     return 0;
-
 }
