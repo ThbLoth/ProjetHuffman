@@ -89,6 +89,8 @@ list nb_Occurrences()
     int carac;
     list minimum =malloc(sizeof(node));
     list stock_occ=malloc(sizeof(node));
+    list premier_maillon = stock_occ;
+
 
     FILE * fic;
 
@@ -133,11 +135,11 @@ list nb_Occurrences()
              }
          }
 
-        stock_occ->lettre = minimum->lettre;
-        stock_occ->nb_occ = minimum->nb_occ;
-        printf("Lettre='%c',Occurences=%d\n",stock_occ->lettre,stock_occ->nb_occ);
-        stock_occ->succ=malloc(sizeof(node));
-        stock_occ=stock_occ->succ;
+        premier_maillon->lettre = minimum->lettre;
+        premier_maillon->nb_occ = minimum->nb_occ;
+        printf("Lettre='%c',Occurences=%d\n",premier_maillon->lettre,premier_maillon->nb_occ);
+        premier_maillon->succ=malloc(sizeof(node));
+        premier_maillon=premier_maillon->succ;
 
         tab[minimum->lettre] =0;
 

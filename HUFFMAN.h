@@ -3,7 +3,7 @@
 
 typedef struct node {
 	int lettre;
-  int nb_occ;
+    int nb_occ;
 	struct node *succ;
 } node;
 
