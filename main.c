@@ -14,8 +14,6 @@ int main()
     Conversion(fic);
     CompteCarac();
     liste_occurence=nb_Occurrences();
-
-    printf("%c = %d",liste_occurence->lettre,liste_occurence->nb_occ);
-
+    
     return 0;
 }
