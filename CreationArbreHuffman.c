@@ -1,3 +1,14 @@
+/*****************************************************************//**
+ * \file   CreationArbreHuffman.c
+ * \brief  Fichier source comprenant les fonctions permettant de creer un arbre d'Huffman.
+ * 
+ * \author Maxime GARNIER maxime.garnier@efrei.net\n
+ * Thibault LOTH thibault.loth@efrei.net\n
+ * Theophile BAPTISTE BOUGON theophile.baptiste.bougon@efrei.net\n
+ * Maladele WATT maladele.watt@efrei.net\n
+ * Alexandre DELFOSSE alexandre.delfosse@efrei.net
+ * \date   December 2020
+ *********************************************************************/
 #include <stdlib.h>
 #include <stdio.h>
 #include "CreationArbreHuffman.h"
