@@ -1,3 +1,4 @@
+#ifndef STRUCTURES
 #define STRUCTURES
 
 /**
