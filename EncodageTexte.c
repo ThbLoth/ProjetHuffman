@@ -1,3 +1,14 @@
+/*****************************************************************//**
+ * \file   EncodageTexte.c
+ * \brief  Fichier source comprenant les fonctions permettant d'encoder le fichier .txt.
+ * 
+ * \author Maxime GARNIER maxime.garnier@efrei.net\n
+ * Thibault LOTH thibault.loth@efrei.net\n
+ * Theophile BAPTISTE BOUGON theophile.baptiste.bougon@efrei.net\n
+ * Maladele WATT maladele.watt@efrei.net\n
+ * Alexandre DELFOSSE alexandre.delfosse@efrei.net
+ * \date   December 2020
+ *********************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
 #include "EncodageTexte.h"
